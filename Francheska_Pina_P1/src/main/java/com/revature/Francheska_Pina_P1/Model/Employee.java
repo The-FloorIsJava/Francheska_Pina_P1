@@ -1,4 +1,4 @@
-package Model;
+package com.revature.Francheska_Pina_P1.Model;
 
 public class Employee {
     private int empId;
