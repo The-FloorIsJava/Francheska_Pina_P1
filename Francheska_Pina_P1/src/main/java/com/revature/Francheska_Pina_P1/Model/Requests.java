@@ -1,36 +1,37 @@
 package com.revature.Francheska_Pina_P1.Model;
 
 public class Requests {
-    private int reqId;
+    private String username;
+    private String password;
     private int empId;
-    private String type;
-    private int amount;
+    private int reqId;
     private String status;
 
     public Requests() {
     }
 
-    public Requests(int empId, String type, int amount, String status) {
+    public Requests(String username, String password, int empId, int reqId, String status) {
+        this.username = username;
+        this.password = password;
         this.empId = empId;
-        this.type = type;
-        this.amount = amount;
+        this.reqId = reqId;
         this.status = status;
     }
 
-    public Requests(int reqId, int empId, String type, int amount, String status) {
-        this.reqId = reqId;
-        this.empId = empId;
-        this.type = type;
-        this.amount = amount;
-        this.status = status;
+    public String getUsername() {
+        return username;
     }
 
-    public int getReqId() {
-        return reqId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setReqId(int reqId) {
-        this.reqId = reqId;
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getEmpId() {
@@ -41,20 +42,12 @@ public class Requests {
         this.empId = empId;
     }
 
-    public String getType() {
-        return type;
+    public int getReqId() {
+        return reqId;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setReqId(int reqId) {
+        this.reqId = reqId;
     }
 
     public String getStatus() {
@@ -68,10 +61,10 @@ public class Requests {
     @Override
     public String toString() {
         return "Requests{" +
-                "reqId=" + reqId +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 ", empId=" + empId +
-                ", type='" + type + '\'' +
-                ", amount=" + amount +
+                ", reqId=" + reqId +
                 ", status='" + status + '\'' +
                 '}';
     }

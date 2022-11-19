@@ -1,30 +1,27 @@
 package com.revature.Francheska_Pina_P1.Model;
 
-public class Employee {
+public class Admin {
     private int empId;
     private String empName;
-    private String role;
-    private String username;
     private String email;
+    private String username;
     private String password;
 
-    public Employee() {
+    public Admin() {
     }
 
-    public Employee(String empName, String role, String username, String email, String password) {
+    public Admin(String empName, String email, String username, String password) {
         this.empName = empName;
-        this.role = role;
-        this.username = username;
         this.email = email;
+        this.username = username;
         this.password = password;
     }
 
-    public Employee(int empId, String empName, String role, String username, String email, String password) {
+    public Admin(int empId, String empName, String email, String username, String password) {
         this.empId = empId;
         this.empName = empName;
-        this.role = role;
-        this.username = username;
         this.email = email;
+        this.username = username;
         this.password = password;
     }
 
@@ -44,12 +41,13 @@ public class Employee {
         this.empName = empName;
     }
 
-    public String getRole() {
-        return role;
+
+    public String getEmail() {
+        return email;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {
@@ -58,14 +56,6 @@ public class Employee {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPassword() {
@@ -78,12 +68,12 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Admin{" +
                 "empId=" + empId +
                 ", empName='" + empName + '\'' +
-                ", role='" + role + '\'' +
-                ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
