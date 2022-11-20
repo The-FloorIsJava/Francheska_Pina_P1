@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added connection factory class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Admin.java" afterDir="false" />
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Changed models classes and added an admin class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/AdminDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Requests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/revature/Francheska_Pina_P1/Util/ConnectionFactoryTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/revature/Francheska_Pina_P1/Util/ConnectionFactoryTestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668736055072</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed models classes and added an admin class">
+      <created>1668902008287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668902008287</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +109,7 @@
     <MESSAGE value="Added ConnectionFactory file." />
     <MESSAGE value="Added git ignore file." />
     <MESSAGE value="Added connection factory class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added connection factory class" />
+    <MESSAGE value="Changed models classes and added an admin class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed models classes and added an admin class" />
   </component>
 </project>
