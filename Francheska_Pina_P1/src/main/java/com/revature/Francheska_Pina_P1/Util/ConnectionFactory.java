@@ -12,17 +12,18 @@ public class ConnectionFactory {
     private Properties properties = new Properties();
 
     private ConnectionFactory(){
+
         try {
             properties.load(new FileReader("src/main/resources/db.properties"));
         } catch (IOException e) {
-            e.printStackTrace(); // let know if file is there
+            e.printStackTrace();
         }
 
     }
 
     static {
         try {
-            Class.forName("org.postgres.Driver");
+            Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -34,10 +35,10 @@ public class ConnectionFactory {
 
     public Connection getConnection(){
         try {
-            return DriverManager.getConnection("", "","");
+            return DriverManager.getConnection(properties.getProperty("url"), properties.getProperty("username"), properties.getProperty("password"));
         } catch (SQLException e) {
             e.printStackTrace();
-            return null; // will know if not connected to the data
+            return null;
         }
     }
 
