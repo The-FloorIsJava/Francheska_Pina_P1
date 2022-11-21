@@ -1,25 +1,28 @@
 package com.revature.Francheska_Pina_P1.Model;
 
-public class Admin {
+public class Employee {
     private int empId;
     private String empName;
+    private String role;
     private String email;
     private String username;
     private String password;
 
-    public Admin() {
+    public Employee() {
     }
 
-    public Admin(String empName, String email, String username, String password) {
+    public Employee(String empName, String role, String email, String username, String password) {
         this.empName = empName;
+        this.role = role;
         this.email = email;
         this.username = username;
         this.password = password;
     }
 
-    public Admin(int empId, String empName, String email, String username, String password) {
+    public Employee(int empId, String empName, String role, String email, String username, String password) {
         this.empId = empId;
         this.empName = empName;
+        this.role = role;
         this.email = email;
         this.username = username;
         this.password = password;
@@ -41,6 +44,13 @@ public class Admin {
         this.empName = empName;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getEmail() {
         return email;
@@ -71,6 +81,7 @@ public class Admin {
         return "Admin{" +
                 "empId=" + empId +
                 ", empName='" + empName + '\'' +
+                ", role='" + role + '\'' +
                 ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
