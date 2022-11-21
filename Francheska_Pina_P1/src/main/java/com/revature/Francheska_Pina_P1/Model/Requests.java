@@ -3,6 +3,7 @@ package com.revature.Francheska_Pina_P1.Model;
 public class Requests {
     private String username;
     private String password;
+    private String type;
     private int empId;
     private int reqId;
     private String status;
@@ -10,9 +11,10 @@ public class Requests {
     public Requests() {
     }
 
-    public Requests(String username, String password, int empId, int reqId, String status) {
+    public Requests(String username, String password, String type, int empId, int reqId, String status) {
         this.username = username;
         this.password = password;
+        this.type = type;
         this.empId = empId;
         this.reqId = reqId;
         this.status = status;
@@ -32,6 +34,14 @@ public class Requests {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getEmpId() {
@@ -63,6 +73,7 @@ public class Requests {
         return "Requests{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", type='" + type + '\'' +
                 ", empId=" + empId +
                 ", reqId=" + reqId +
                 ", status='" + status + '\'' +
