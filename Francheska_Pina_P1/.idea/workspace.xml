@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added the Crudable and Application">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Requests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Util/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Util/ConnectionFactory.java" afterDir="false" />
-    </list>
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Edited request. Added the String type." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +120,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669001708750</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Edit the Employee class, controller, and DAO">
+      <created>1669001886212</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669001886212</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Edited the ConnectionFactory">
+      <created>1669002011793</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669002011793</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Edited request. Added the String type.">
+      <created>1669002129219</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669002129220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,7 +162,10 @@
     <MESSAGE value="Changed models classes and added an admin class" />
     <MESSAGE value="Added ConnectionFactoryTestSuite class" />
     <MESSAGE value="Added the Crudable and Application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the Crudable and Application" />
+    <MESSAGE value="Edit the Employee class, controller, and DAO" />
+    <MESSAGE value="Edited the ConnectionFactory" />
+    <MESSAGE value="Edited request. Added the String type." />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited request. Added the String type." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
