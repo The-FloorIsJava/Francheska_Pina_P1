@@ -2,6 +2,7 @@ package com.revature.Francheska_Pina_P1.DAO;
 
 import com.revature.Francheska_Pina_P1.Model.Employee;
 import com.revature.Francheska_Pina_P1.Util.ConnectionFactory;
+import com.revature.Francheska_Pina_P1.Util.Exceptions.InvalidEmployeeInputException;
 import com.revature.Francheska_Pina_P1.Util.Interface.Crudable;
 
 import java.sql.*;
@@ -86,7 +87,7 @@ public class EmployeeDAO implements Crudable<Employee> {
 
             //If there is no next method
             if(!resultSet.next()){
-                throw new RuntimeException("Entered information for " + username + "was incorrect. Please try again");
+                throw new InvalidEmployeeInputException("Entered information for " + username + "was incorrect. Please try again");
             }
 
 
