@@ -26,7 +26,8 @@ public class EmployeeController {
         app.post("employee",this::postEmployeeHandler);
         app.get("employee", this::getAllEmployeeHandler);
         app.post("employee/{name}",this::getSpecificEmployeeHandler);
-        app.post("login", this::login);app.delete("logout", this::logoutHandler);
+        app.post("login", this::loginHandler);
+        app.delete("logout", this::logoutHandler);
     }
 
 
@@ -55,7 +56,7 @@ public class EmployeeController {
         ctx.result("Hello Welcome to Disney");
     }
 
-    private void login(Context context) throws JsonProcessingException {
+    private void loginHandler(Context context) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         LoginCreds loginCreds = mapper.readValue(context.body(), LoginCreds.class);
         employeeService.login(loginCreds.getUsername(), loginCreds.getPassword());
