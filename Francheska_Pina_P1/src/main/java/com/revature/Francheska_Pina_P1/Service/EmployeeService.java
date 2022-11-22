@@ -31,6 +31,14 @@ public class EmployeeService {
         return employeeDAO.findAll();
     }
 
+    public void login(String username, String password) {
+        sessionEmployee = employeeDAO.loginCheck(username, password);
+    }
+
+    public void logout(){
+        sessionEmployee = null;
+    }
+
     public Employee getSessionEmployee(){
         return sessionEmployee;
     }

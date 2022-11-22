@@ -24,7 +24,7 @@ public class EmployeeDAO implements Crudable<Employee> {
             preparedStatement.setString(4, newEmployee.getUsername());
             preparedStatement.setString(5, newEmployee.getPassword());
 
-            int checkInsert = preparedStatement.executeUpdate();
+            int checkInsert = preparedStatement.executeUpdate(); // update
 
             if(checkInsert == 0){
                 throw new RuntimeException("Customer was not added to database");
@@ -73,6 +73,34 @@ public class EmployeeDAO implements Crudable<Employee> {
         return false;
     }
 
+    public Employee loginCheck(String username, String password){
+        try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
+            String sql = "select * from username = ? and password = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+
+            ResultSet resultSet = preparedStatement.executeQuery(); // execute a query
+
+            //If there is no next method
+            if(!resultSet.next()){
+                throw new RuntimeException("Entered information for " + username + "was incorrect. Please try again");
+            }
+
+
+            return convertSQLInfoToEmployee(resultSet);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+    //convert information returned to java
+    // comes from the constructor
+
     private Employee convertSQLInfoToEmployee(ResultSet resultSet) throws SQLException{
         Employee employee = new Employee();
 
@@ -85,4 +113,6 @@ public class EmployeeDAO implements Crudable<Employee> {
 
         return employee;
     }
+
+
 }

@@ -25,8 +25,10 @@ public class EmployeeController {
         app.post("employee",this::postEmployeeHandler);
         app.get("employee", this::getAllEmployeeHandler);
         app.post("employee/{name}",this::getSpecificEmployeeHandler);
-
+        app.post("login", this::login);
     }
+
+
 
     // gets a specific employee name
     private void getSpecificEmployeeHandler(Context context){
@@ -50,5 +52,9 @@ public class EmployeeController {
 
     public void helloHandler(Context ctx){
         ctx.result("Hello Welcome to Disney");
+    }
+
+    private void login(Context context) {
+        ObjectMapper mapper = new ObjectMapper();
     }
 }
