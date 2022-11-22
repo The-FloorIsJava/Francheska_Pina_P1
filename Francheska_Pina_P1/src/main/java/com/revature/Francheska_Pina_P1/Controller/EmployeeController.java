@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.Francheska_Pina_P1.DAO.EmployeeDAO;
 import com.revature.Francheska_Pina_P1.Model.Employee;
 import com.revature.Francheska_Pina_P1.Service.EmployeeService;
+import com.revature.Francheska_Pina_P1.Util.DTO.LoginCreds;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 
@@ -54,7 +55,10 @@ public class EmployeeController {
         ctx.result("Hello Welcome to Disney");
     }
 
-    private void login(Context context) {
+    private void login(Context context) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
+        LoginCreds loginCreds = mapper.readValue(context.body(), LoginCreds.class);
+        employeeService.login(loginCreds.getUsername(), loginCreds.getPassword());
+        context.json("You are log in");
     }
 }
