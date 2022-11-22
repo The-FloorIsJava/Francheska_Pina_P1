@@ -26,7 +26,7 @@ public class EmployeeController {
         app.post("employee",this::postEmployeeHandler);
         app.get("employee", this::getAllEmployeeHandler);
         app.post("employee/{name}",this::getSpecificEmployeeHandler);
-        app.post("login", this::login);
+        app.post("login", this::login);app.delete("logout", this::logoutHandler);
     }
 
 
@@ -59,6 +59,11 @@ public class EmployeeController {
         ObjectMapper mapper = new ObjectMapper();
         LoginCreds loginCreds = mapper.readValue(context.body(), LoginCreds.class);
         employeeService.login(loginCreds.getUsername(), loginCreds.getPassword());
-        context.json("You are log in");
+        context.json("Employer has successfully logged in");
+    }
+
+    private void logoutHandler(Context context){
+        employeeService.logout();
+        context.json("Employer has logged out");
     }
 }
