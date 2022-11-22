@@ -77,7 +77,7 @@ public class EmployeeDAO implements Crudable<Employee> {
     public Employee loginCheck(String username, String password){
             //opens  the connection
         try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
-            String sql = "select * from username = ? and password = ?";
+            String sql = "select * from employee where username = ? and password = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             preparedStatement.setString(1, username);

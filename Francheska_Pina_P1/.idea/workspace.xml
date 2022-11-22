@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added the logoutHandler">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Util/Exceptions/InvalidEmployeeInputException.java" afterDir="false" />
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +187,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669092060046</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Created the InvalidEmployeeInputException">
+      <created>1669092532169</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669092532169</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck.">
+      <created>1669092602348</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669092602348</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,7 +231,9 @@
     <MESSAGE value="Added the LoginCheck to the EmployeeDAO" />
     <MESSAGE value="Set up the LoginCreds" />
     <MESSAGE value="Added the logoutHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the logoutHandler" />
+    <MESSAGE value="Created the InvalidEmployeeInputException" />
+    <MESSAGE value="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck." />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
