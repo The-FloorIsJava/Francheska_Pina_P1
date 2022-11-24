@@ -11,6 +11,7 @@ public interface Crudable<T> {
     List<T> findAll();
     T findById(int id);
 
+    T findByUsername(String username);
     // Update
     boolean update(T updatedObject);
 
