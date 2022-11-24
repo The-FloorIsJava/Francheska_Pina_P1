@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added findbyusername to Crudable">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Util/Interface/Crudable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Util/Interface/Crudable.java" afterDir="false" />
-    </list>
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added the findByUsername method to the EmployeeDAO" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +232,35 @@
       <option name="project" value="LOCAL" />
       <updated>1669318507247</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Created the ticketDAO and also added the create">
+      <created>1669320036691</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669320036691</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Created the ticketDAO and also added the create">
+      <created>1669320046561</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669320046561</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Created the TicketService file and added also addTicket method">
+      <created>1669320145414</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669320145414</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added the findByUsername method to the EmployeeDAO">
+      <created>1669320204133</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1669320204133</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,7 +297,10 @@
     <MESSAGE value="Edited the logoutHandler to check if user has logout" />
     <MESSAGE value="Edited to add type." />
     <MESSAGE value="Added findbyusername to Crudable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added findbyusername to Crudable" />
+    <MESSAGE value="Created the ticketDAO and also added the create" />
+    <MESSAGE value="Created the TicketService file and added also addTicket method" />
+    <MESSAGE value="Added the findByUsername method to the EmployeeDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the findByUsername method to the EmployeeDAO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
