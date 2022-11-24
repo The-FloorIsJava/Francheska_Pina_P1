@@ -65,6 +65,35 @@ public class EmployeeDAO implements Crudable<Employee> {
     }
 
     @Override
+    public Employee findByUsername(String username) {
+
+        try(Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
+            String sql = "select * from employee where username = ?";
+            // PreparedStatements prevent SQL injection
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            // set the information for the ?
+            preparedStatement.setString(1, username);
+
+
+            ResultSet resultSet = preparedStatement.executeQuery(); // execute a query
+
+            //If there is no next method
+        if(!resultSet.next()){
+            throw new InvalidEmployeeInputException("Entered information for " + username + "was incorrect. Please try again");
+        }
+            return convertSQLInfoToEmployee(resultSet);
+
+
+        } catch (SQLException e){
+        e.printStackTrace();
+        return null;
+        }
+
+
+    }
+
+    @Override
     public boolean update(Employee updatedEmployee) {
         return false;
     }
