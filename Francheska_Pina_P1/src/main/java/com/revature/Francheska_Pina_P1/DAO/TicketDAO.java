@@ -4,8 +4,10 @@ import com.revature.Francheska_Pina_P1.Model.Ticket;
 import com.revature.Francheska_Pina_P1.Util.ConnectionFactory;
 import com.revature.Francheska_Pina_P1.Util.Interface.Crudable;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -56,5 +58,15 @@ public class TicketDAO implements Crudable<Ticket> {
     @Override
     public boolean delete(int id) {
         return false;
+    }
+
+    private Ticket convertSQLInfoToTicket(ResultSet resultSet)throws SQLException{
+        Ticket ticket = new Ticket();
+        ticket.setEmpId(resultSet.getInt("empId"));
+        ticket.setReqId(resultSet.getInt("reqId"));
+        ticket.setType(resultSet.getString("type"));
+        ticket.setAmount(resultSet.getDouble("amount"));
+        ticket.setStatus(resultSet.getString("status"));
+        return ticket;
     }
 }

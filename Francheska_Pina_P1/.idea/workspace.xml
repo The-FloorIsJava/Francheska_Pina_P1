@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added the findByUsername method to the EmployeeDAO" />
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added the findByUsername method to the EmployeeDAO">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
