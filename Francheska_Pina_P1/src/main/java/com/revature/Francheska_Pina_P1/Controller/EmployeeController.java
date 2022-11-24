@@ -60,11 +60,19 @@ public class EmployeeController {
         ObjectMapper mapper = new ObjectMapper();
         LoginCreds loginCreds = mapper.readValue(context.body(), LoginCreds.class);
         employeeService.login(loginCreds.getUsername(), loginCreds.getPassword());
+        String user = employeeService.getSessionEmployee().getUsername();
+//        if(user.equals("pokemon")){
+//            context.json("You love pokemon");
+//        }else{
+//            context.json("Employer has successfully logged in");
+//        }
+
         context.json("Employer has successfully logged in");
     }
 
     private void logoutHandler(Context context){
+        String employerUser = employeeService.getSessionEmployee().getUsername();
         employeeService.logout();
-        context.json("Employer has logged out");
+        context.json(employerUser + "  has logged out");
     }
 }
