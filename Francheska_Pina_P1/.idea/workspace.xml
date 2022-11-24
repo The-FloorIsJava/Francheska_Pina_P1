@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck.">
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Edited the logoutHandler to check if user has logout">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Util/Interface/Crudable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Util/Interface/Crudable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +205,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669092602348</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Changed the method login to loginHandler and changed the naming in the endpoint">
+      <created>1669153185896</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669153185896</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed the loginCheck query that was missing the table name.">
+      <created>1669153258363</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669153258363</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Edited the logoutHandler to check if user has logout">
+      <created>1669315250191</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669315250191</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +258,10 @@
     <MESSAGE value="Added the logoutHandler" />
     <MESSAGE value="Created the InvalidEmployeeInputException" />
     <MESSAGE value="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck." />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck." />
+    <MESSAGE value="Changed the method login to loginHandler and changed the naming in the endpoint" />
+    <MESSAGE value="Fixed the loginCheck query that was missing the table name." />
+    <MESSAGE value="Edited the logoutHandler to check if user has logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited the logoutHandler to check if user has logout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

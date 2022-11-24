@@ -5,16 +5,18 @@ public class Ticket {
     private int reqID;
     private String username;
     private String password;
+    private String type;
     private double amount;
     private String status;
 
     public Ticket() {
     }
 
-    public Ticket(int reqID, String username, String password, double amount, String status) {
+    public Ticket(int reqID, String username, String password, String type, double amount, String status) {
         this.reqID = reqID;
         this.username = username;
         this.password = password;
+        this.type = type;
         this.amount = amount;
         this.status = status;
     }
@@ -24,6 +26,7 @@ public class Ticket {
         this.reqID = reqID;
         this.username = username;
         this.password = password;
+        this.type = type;
         this.amount = amount;
         this.status = status;
     }
@@ -60,6 +63,14 @@ public class Ticket {
         this.password = password;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public double getAmount() {
         return amount;
     }
@@ -83,6 +94,7 @@ public class Ticket {
                 ", reqID=" + reqID +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", type='" + type + '\'' +
                 ", amount=" + amount +
                 ", status='" + status + '\'' +
                 '}';
