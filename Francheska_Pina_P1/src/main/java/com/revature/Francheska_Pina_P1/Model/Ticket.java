@@ -2,7 +2,7 @@ package com.revature.Francheska_Pina_P1.Model;
 
 public class Ticket {
     private int empId;
-    private int reqID;
+    private int reqId;
     private String username;
     private String password;
     private String type;
@@ -12,8 +12,8 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(int reqID, String username, String password, String type, double amount, String status) {
-        this.reqID = reqID;
+    public Ticket(int reqId, String username, String password, String type, double amount, String status) {
+        this.reqId = reqId;
         this.username = username;
         this.password = password;
         this.type = type;
@@ -21,9 +21,9 @@ public class Ticket {
         this.status = status;
     }
 
-    public Ticket(int empId, int reqID, String username, String password, String type, double amount, String status) {
+    public Ticket(int empId, int reqId, String username, String password, String type, double amount, String status) {
         this.empId = empId;
-        this.reqID = reqID;
+        this.reqId = reqId;
         this.username = username;
         this.password = password;
         this.type = type;
@@ -39,12 +39,12 @@ public class Ticket {
         this.empId = empId;
     }
 
-    public int getReqID() {
-        return reqID;
+    public int getReqId() {
+        return reqId;
     }
 
-    public void setReqID(int reqID) {
-        this.reqID = reqID;
+    public void setReqId(int reqId) {
+        this.reqId = reqId;
     }
 
     public String getUsername() {
@@ -91,7 +91,7 @@ public class Ticket {
     public String toString() {
         return "Ticket{" +
                 "empId=" + empId +
-                ", reqID=" + reqID +
+                ", reqId=" + reqId +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", type='" + type + '\'' +
