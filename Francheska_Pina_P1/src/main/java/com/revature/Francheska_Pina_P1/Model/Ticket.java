@@ -31,6 +31,21 @@ public class Ticket {
         this.status = status;
     }
 
+    public Ticket(int empId, String type, double amount) {
+        this.empId = empId;
+        this.type = type;
+        this.amount = amount;
+    }
+
+    public Ticket(int empId, int reqId, String username, String password, String type, double amount) {
+        this.empId = empId;
+        this.reqId = reqId;
+        this.username = username;
+        this.password = password;
+        this.type = type;
+        this.amount = amount;
+    }
+
     public int getEmpId() {
         return empId;
     }
