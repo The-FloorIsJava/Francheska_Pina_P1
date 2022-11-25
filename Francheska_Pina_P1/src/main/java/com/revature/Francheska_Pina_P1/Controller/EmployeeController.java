@@ -14,11 +14,13 @@ import java.util.List;
 
 public class EmployeeController {
     EmployeeService employeeService;
+    TicketService ticketService;
     Javalin app;
 
 
-    public EmployeeController(Javalin app, EmployeeService employeeService){
+    public EmployeeController(Javalin app, EmployeeService employeeService, TicketService ticketService){
         this.employeeService = employeeService;
+        this.ticketService = ticketService;
         this.app = app;
     }
 
@@ -68,12 +70,13 @@ public class EmployeeController {
 //            context.json("Employer has successfully logged in");
 //        }
 
-        context.json("Employer has successfully logged in");
+        context.json( user + " has successfully logged in");
     }
 
     private void logoutHandler(Context context){
         String employerUser = employeeService.getSessionEmployee().getUsername();
         employeeService.logout();
         context.json(employerUser + "  has logged out");
+
     }
 }
