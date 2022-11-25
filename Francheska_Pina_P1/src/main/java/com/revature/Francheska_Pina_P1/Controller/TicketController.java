@@ -15,14 +15,15 @@ import java.util.List;
 public class TicketController {
     TicketService ticketService;
     EmployeeService employeeService;
-//    Javalin app;
+    Javalin app;
 
-    public TicketController(EmployeeService employeeService) {
+    public TicketController(Javalin app, EmployeeService employeeService, TicketService ticketService) {
         this.employeeService = employeeService;
-        ticketService = new TicketService();
+        this.ticketService = ticketService;
+        this.app = app;
     }
 
-    public void ticketEndPoint(Javalin app){
+    public void ticketEndPoint(){
         app.post("ticket", this::postTicketHandler);
         app.get("ticket", this::getAllTicketHandler);
     }
@@ -33,9 +34,15 @@ public class TicketController {
     }
 
     private void postTicketHandler(Context context) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        Ticket ticket = mapper.readValue(context.body(), Ticket.class);
-        ticketService.addEmployee(ticket);
-        context.json(ticket);
+        Employee employee = this.employeeService.getSessionEmployee();
+        if(employee == null){
+            context.json("You need to login to be able to submit");
+            return;
+        }
+            ObjectMapper mapper = new ObjectMapper();
+            Ticket ticket = mapper.readValue(context.body(), Ticket.class);
+            ticketService.addEmployee(ticket);
+            context.json(ticket);
+
     }
 }
