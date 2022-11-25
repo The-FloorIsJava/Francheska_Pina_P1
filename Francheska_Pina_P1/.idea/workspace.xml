@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Fic the code to connect the Dao with Employee and the ticket">
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Fix the EmployeeController Javalin connection and Added a message to the postTicketHandler.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -308,7 +306,49 @@
       <option name="project" value="LOCAL" />
       <updated>1669354972985</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added new constructors">
+      <created>1669355043836</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669355043836</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Added getAllTicketHandler and replace the addTicket with addEmployee on the postTicketHandler">
+      <created>1669355125100</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669355125100</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Replaced addTicket addEmployee to and added getAllTicket method. Also, TicketService has an array list.">
+      <created>1669355217613</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669355217613</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Fix the connection problem">
+      <created>1669406109719</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669406109719</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fix the EmployeeController Javalin connection">
+      <created>1669406178129</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1669406178129</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fix the EmployeeController Javalin connection and Added a message to the postTicketHandler.">
+      <created>1669406276166</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1669406276166</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,12 +363,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Edit the Employee class, controller, and DAO" />
-    <MESSAGE value="Edited the ConnectionFactory" />
-    <MESSAGE value="Edited request. Added the String type." />
-    <MESSAGE value="Added the Employee Service" />
-    <MESSAGE value="Added the login feature" />
-    <MESSAGE value="Added the login handler to the EmployeeController" />
     <MESSAGE value="Added the LoginCheck to the EmployeeDAO" />
     <MESSAGE value="Set up the LoginCreds" />
     <MESSAGE value="Added the logoutHandler" />
@@ -348,7 +382,13 @@
     <MESSAGE value="Edited the application to fix the connection to javalin" />
     <MESSAGE value="Fixed the javalin app code on the controller" />
     <MESSAGE value="Fic the code to connect the Dao with Employee and the ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fic the code to connect the Dao with Employee and the ticket" />
+    <MESSAGE value="Added new constructors" />
+    <MESSAGE value="Added getAllTicketHandler and replace the addTicket with addEmployee on the postTicketHandler" />
+    <MESSAGE value="Replaced addTicket addEmployee to and added getAllTicket method. Also, TicketService has an array list." />
+    <MESSAGE value="Fix the connection problem" />
+    <MESSAGE value="Fix the EmployeeController Javalin connection" />
+    <MESSAGE value="Fix the EmployeeController Javalin connection and Added a message to the postTicketHandler." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the EmployeeController Javalin connection and Added a message to the postTicketHandler." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -360,6 +400,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.postgresql.util.PSQLException" package="org.postgresql.util" />
+          <option name="timeStamp" value="5" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
