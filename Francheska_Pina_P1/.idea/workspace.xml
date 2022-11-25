@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added the findByUsername method to the EmployeeDAO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Fic the code to connect the Dao with Employee and the ticket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +266,49 @@
       <option name="project" value="LOCAL" />
       <updated>1669320204133</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Changed reqID to reqId">
+      <created>1669322340412</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669322340412</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Made the TicketController and added the postTicketHandler">
+      <created>1669322379493</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669322379493</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added the convertSQLInfoToTicket method to the TicketDAO">
+      <created>1669322421487</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669322421487</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Edited the application to fix the connection to javalin">
+      <created>1669354770679</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669354770679</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fixed the javalin app code on the controller">
+      <created>1669354849178</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1669354849178</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fic the code to connect the Dao with Employee and the ticket">
+      <created>1669354972985</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669354972985</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,12 +323,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ConnectionFactory file." />
-    <MESSAGE value="Added git ignore file." />
-    <MESSAGE value="Added connection factory class" />
-    <MESSAGE value="Changed models classes and added an admin class" />
-    <MESSAGE value="Added ConnectionFactoryTestSuite class" />
-    <MESSAGE value="Added the Crudable and Application" />
     <MESSAGE value="Edit the Employee class, controller, and DAO" />
     <MESSAGE value="Edited the ConnectionFactory" />
     <MESSAGE value="Edited request. Added the String type." />
@@ -305,7 +342,13 @@
     <MESSAGE value="Created the ticketDAO and also added the create" />
     <MESSAGE value="Created the TicketService file and added also addTicket method" />
     <MESSAGE value="Added the findByUsername method to the EmployeeDAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the findByUsername method to the EmployeeDAO" />
+    <MESSAGE value="Changed reqID to reqId" />
+    <MESSAGE value="Made the TicketController and added the postTicketHandler" />
+    <MESSAGE value="Added the convertSQLInfoToTicket method to the TicketDAO" />
+    <MESSAGE value="Edited the application to fix the connection to javalin" />
+    <MESSAGE value="Fixed the javalin app code on the controller" />
+    <MESSAGE value="Fic the code to connect the Dao with Employee and the ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fic the code to connect the Dao with Employee and the ticket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
