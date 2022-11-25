@@ -1,6 +1,7 @@
 package com.revature.Francheska_Pina_P1.Service;
 
 import com.revature.Francheska_Pina_P1.DAO.EmployeeDAO;
+import com.revature.Francheska_Pina_P1.DAO.TicketDAO;
 import com.revature.Francheska_Pina_P1.Model.Employee;
 
 import java.util.List;
@@ -10,9 +11,11 @@ public class EmployeeService {
     private Employee sessionEmployee = null;
 
     private final EmployeeDAO employeeDAO;
+    private final TicketDAO ticketDAO;
 
-    public EmployeeService(EmployeeDAO employeeDAO){
+    public EmployeeService(EmployeeDAO employeeDAO, TicketDAO ticketDAO){
         this.employeeDAO = employeeDAO;
+        this.ticketDAO = ticketDAO;
     }
 
     public Employee addEmployee(Employee employee){
