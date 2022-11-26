@@ -26,6 +26,14 @@ public class TicketController {
     public void ticketEndPoint(){
         app.post("ticket", this::postTicketHandler);
         app.get("ticket", this::getAllTicketHandler);
+        app.put("ticket/manager", this::putManagerTicketHandler);
+    }
+
+    private void putManagerTicketHandler(Context context) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        Ticket ticket = mapper.readValue(context.body(), Ticket.class);
+        ticketService.updateTicket(ticket);
+        context.json(ticket);
     }
 
     private void getAllTicketHandler(Context context) {
