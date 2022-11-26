@@ -1,35 +1,33 @@
 package com.revature.Francheska_Pina_P1.DAO;
 
+import com.revature.Francheska_Pina_P1.Model.Employee;
 import com.revature.Francheska_Pina_P1.Model.Ticket;
 import com.revature.Francheska_Pina_P1.Util.ConnectionFactory;
 import com.revature.Francheska_Pina_P1.Util.Interface.Crudable;
 
 import javax.xml.transform.Result;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TicketDAO implements Crudable<Ticket> {
     @Override
     public Ticket create(Ticket newTicket){
         try(Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
-            String sql = "insert into ticket(empID, type, amount) values (?, ? ,?)";
+            String sql = "insert into ticket (empId, type, amount) values (?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1,newTicket.getEmpId());
+//            preparedStatement.setInt(2, newTicket.getReqId());
             preparedStatement.setString(2,newTicket.getType());
             preparedStatement.setDouble(3,newTicket.getAmount());
-
             int checkInsert = preparedStatement.executeUpdate();
 
             if(checkInsert == 0){
-                throw new RuntimeException("Your ticket was not added to database");
+                throw new RuntimeException("Your ticket was not added to the database");
             }
 
-
             return newTicket;
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
             return null;
         }
@@ -37,7 +35,23 @@ public class TicketDAO implements Crudable<Ticket> {
 
     @Override
     public List<Ticket> findAll() {
-        return null;
+        try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
+            List<Ticket> ticket = new ArrayList<>();
+            String sql = "select * from ticket";
+
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            while (resultSet.next()){
+                ticket.add(convertSQLInfoToTicket(resultSet));
+            }
+            return ticket;
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     @Override
@@ -51,8 +65,24 @@ public class TicketDAO implements Crudable<Ticket> {
     }
 
     @Override
-    public boolean update(Ticket updatedObject) {
-        return false;
+    public boolean update(Ticket updatedTicket) {
+        try(Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
+            String sql = "UPDATE ticket SET status = ? where reqId = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, updatedTicket.getStatus());
+            preparedStatement.setInt(2,updatedTicket.getReqId());
+
+            int checkInsert = preparedStatement.executeUpdate();
+
+            if(checkInsert == 0){
+                throw new RuntimeException("The ticket was not updated");
+            }
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
     }
 
     @Override
