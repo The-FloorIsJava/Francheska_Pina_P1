@@ -5,7 +5,6 @@ import com.revature.Francheska_Pina_P1.Model.Ticket;
 import com.revature.Francheska_Pina_P1.Util.ConnectionFactory;
 import com.revature.Francheska_Pina_P1.Util.Interface.Crudable;
 
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,11 +33,36 @@ public class TicketDAO implements Crudable<Ticket> {
     }
 
     @Override
+    public List<Ticket>findPendingTicket(Employee pendingTicket){
+
+
+        try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
+            List<Ticket> pendingticket = new ArrayList<>();
+            String sql = " select * from ticket where empId = ? and status = 'processing' ";
+//            String sql = "SELECT ticket.empid FROM ticket INNER JOIN employee ON ticket.empid = employee.empid";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, pendingTicket.getEmpId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                pendingticket.add(convertSQLInfoToTicket(resultSet));
+            }
+            return pendingticket;
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+    @Override
     public List<Ticket> findAll() {
         try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
             List<Ticket> ticket = new ArrayList<>();
             String sql = "select * from ticket";
-
+//            String sql = "SELECT ticket.empid FROM ticket INNER JOIN employee ON ticket.empid = employee.empid";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
 
@@ -89,6 +113,8 @@ public class TicketDAO implements Crudable<Ticket> {
     public boolean delete(int id) {
         return false;
     }
+
+
 
     private Ticket convertSQLInfoToTicket(ResultSet resultSet)throws SQLException{
         Ticket ticket = new Ticket();
