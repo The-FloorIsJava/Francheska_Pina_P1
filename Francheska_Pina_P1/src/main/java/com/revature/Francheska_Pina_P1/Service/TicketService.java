@@ -2,6 +2,7 @@ package com.revature.Francheska_Pina_P1.Service;
 
 import com.revature.Francheska_Pina_P1.DAO.EmployeeDAO;
 import com.revature.Francheska_Pina_P1.DAO.TicketDAO;
+import com.revature.Francheska_Pina_P1.Model.Employee;
 import com.revature.Francheska_Pina_P1.Model.Ticket;
 
 import java.util.List;
@@ -18,27 +19,20 @@ public class TicketService {
         this.employeeDAO = employeeDAO;
     }
 
-
-
-
-//    public TicketService() {
-//        ticketsList = new ArrayList<>();
-//    }
-
     public Ticket addEmployee(Ticket ticket){
        return ticketDAO.create(ticket);
     }
 
-//    public void addEmployee(Ticket employee){
-//        ticketsList.add(employee);
-//    }
 
     public boolean updateTicket(Ticket ticket){
         return ticketDAO.update(ticket);
     }
 
+    public List<Ticket>getPendingTicket(Employee employee){
+        return ticketDAO.findPendingTicket(employee);
+    }
+
     public List<Ticket> getAllTicket(){
-//        return ticketsList;
         return ticketDAO.findAll();
 
     }
