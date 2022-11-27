@@ -27,13 +27,36 @@ public class TicketController {
         app.post("ticket", this::postTicketHandler);
         app.get("ticket", this::getAllTicketHandler);
         app.put("ticket/manager", this::putManagerTicketHandler);
+        app.get("ticket/pending",this::getPendingTicket);
+    }
+
+    private void getPendingTicket(Context context) {
+        Employee employee = employeeService.getSessionEmployee();
+        if(employee == null){
+            context.json("You need to login to view pending ticket");
+            return;
+        }
+        List<Ticket>pendingTicket = ticketService.getPendingTicket(employee);
+        if(pendingTicket == null){
+            context.json("You have no ticket");
+            return;
+        }
+
+        context.json(pendingTicket);
+
     }
 
     private void putManagerTicketHandler(Context context) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        Ticket ticket = mapper.readValue(context.body(), Ticket.class);
-        ticketService.updateTicket(ticket);
-        context.json(ticket);
+        String user = employeeService.getSessionEmployee().getRole();
+        if(user.equals("manager")){
+            ObjectMapper mapper = new ObjectMapper();
+            Ticket ticket = mapper.readValue(context.body(), Ticket.class);
+            ticketService.updateTicket(ticket);
+            context.json(ticket);
+            context.json("You were able to update the ticket status");
+        }else {
+            context.json("Nice try, but that won't work");
+        }
     }
 
     private void getAllTicketHandler(Context context) {
@@ -42,7 +65,7 @@ public class TicketController {
     }
 
     private void postTicketHandler(Context context) throws JsonProcessingException {
-        Employee employee = this.employeeService.getSessionEmployee();
+        Employee employee = employeeService.getSessionEmployee();
         if(employee == null){
             context.json("You need to login to be able to submit");
             return;
