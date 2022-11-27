@@ -1,6 +1,7 @@
 package com.revature.Francheska_Pina_P1.DAO;
 
 import com.revature.Francheska_Pina_P1.Model.Employee;
+import com.revature.Francheska_Pina_P1.Model.Ticket;
 import com.revature.Francheska_Pina_P1.Util.ConnectionFactory;
 import com.revature.Francheska_Pina_P1.Util.Exceptions.InvalidEmployeeInputException;
 import com.revature.Francheska_Pina_P1.Util.Interface.Crudable;
@@ -37,6 +38,11 @@ public class EmployeeDAO implements Crudable<Employee> {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public List<Ticket> findPendingTicket(Employee employee) {
+        return null;
     }
 
     @Override

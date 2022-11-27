@@ -49,10 +49,20 @@ public class EmployeeController {
     }
 
     private void postEmployeeHandler(Context context) throws JsonProcessingException {
+
         ObjectMapper mapper = new ObjectMapper();
         Employee employee = mapper.readValue(context.body(), Employee.class);
         employeeService.addEmployee(employee);
         context.json(employee);
+
+        String user = employeeService.getSessionEmployee().getUsername();
+        if(user == null){
+            context.json("Please try a different username");
+        }else {
+            context.json("User was added to the system");
+        }
+
+
     }
 
     public void helloHandler(Context ctx){
@@ -64,11 +74,13 @@ public class EmployeeController {
         LoginCreds loginCreds = mapper.readValue(context.body(), LoginCreds.class);
         employeeService.login(loginCreds.getUsername(), loginCreds.getPassword());
         String user = employeeService.getSessionEmployee().getUsername();
-//        if(user.equals("pokemon")){
-//            context.json("You love pokemon");
-//        }else{
-//            context.json("Employer has successfully logged in");
-//        }
+        if(user.equals(user)){
+            context.json("You love pokemon");
+        }else{
+            context.json("Employer has successfully logged in");
+
+        }
+
 
         context.json( user + " has successfully logged in");
     }

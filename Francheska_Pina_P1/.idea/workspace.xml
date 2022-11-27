@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Changed tickerService constructor and fic the addEmployee to create from the ticketDAO">
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added getPendingTicket method and handler to te TicketController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/EmployeeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +356,63 @@
       <option name="project" value="LOCAL" />
       <updated>1669406418304</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Removed the username and password in ticket">
+      <created>1669422157308</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1669422157308</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added a manager ticket handler">
+      <created>1669422189526</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1669422189526</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Got rid of some code and change the Exception e from create ticket to SQLException.">
+      <created>1669422480465</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1669422480465</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added uppdateTicket method to TicketService">
+      <created>1669422534027</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1669422534027</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Added findPendingTicket to Crudable">
+      <created>1669586786574</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1669586786575</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added findPendingTicket to the DAO">
+      <created>1669586881011</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1669586881011</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added getPendingTicket to TicketService">
+      <created>1669586925060</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1669586925060</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added getPendingTicket method and handler to te TicketController">
+      <created>1669587051442</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1669587051442</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -372,14 +427,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Set up the LoginCreds" />
-    <MESSAGE value="Added the logoutHandler" />
-    <MESSAGE value="Created the InvalidEmployeeInputException" />
-    <MESSAGE value="Replaced the RuntimeException with InvalidEmployeeInputException at loginCheck." />
-    <MESSAGE value="Changed the method login to loginHandler and changed the naming in the endpoint" />
-    <MESSAGE value="Fixed the loginCheck query that was missing the table name." />
-    <MESSAGE value="Edited the logoutHandler to check if user has logout" />
-    <MESSAGE value="Edited to add type." />
     <MESSAGE value="Added findbyusername to Crudable" />
     <MESSAGE value="Created the ticketDAO and also added the create" />
     <MESSAGE value="Created the TicketService file and added also addTicket method" />
@@ -397,7 +444,15 @@
     <MESSAGE value="Fix the EmployeeController Javalin connection" />
     <MESSAGE value="Fix the EmployeeController Javalin connection and Added a message to the postTicketHandler." />
     <MESSAGE value="Changed tickerService constructor and fic the addEmployee to create from the ticketDAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed tickerService constructor and fic the addEmployee to create from the ticketDAO" />
+    <MESSAGE value="Removed the username and password in ticket" />
+    <MESSAGE value="Added a manager ticket handler" />
+    <MESSAGE value="Got rid of some code and change the Exception e from create ticket to SQLException." />
+    <MESSAGE value="Added uppdateTicket method to TicketService" />
+    <MESSAGE value="Added findPendingTicket to Crudable" />
+    <MESSAGE value="Added findPendingTicket to the DAO" />
+    <MESSAGE value="Added getPendingTicket to TicketService" />
+    <MESSAGE value="Added getPendingTicket method and handler to te TicketController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getPendingTicket method and handler to te TicketController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
