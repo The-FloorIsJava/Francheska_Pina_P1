@@ -1,5 +1,8 @@
 package com.revature.Francheska_Pina_P1.Util.Interface;
 
+import com.revature.Francheska_Pina_P1.Model.Employee;
+import com.revature.Francheska_Pina_P1.Model.Ticket;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -7,6 +10,8 @@ public interface Crudable<T> {
 
     // create
     T create(T newObject);
+
+    List<Ticket>findPendingTicket(Employee pendingTicket);
 
     // Read
     List<T> findAll();
@@ -18,4 +23,5 @@ public interface Crudable<T> {
 
     // Delete
     boolean delete(int id);
+
 }
