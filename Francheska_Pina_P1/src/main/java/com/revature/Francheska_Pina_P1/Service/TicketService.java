@@ -34,7 +34,7 @@ public class TicketService {
         return ticketDAO.findPendingTicket(employee);
     }
 
-    public List<Ticket> getAllTicket(){
+    public List<Ticket> getAllPendingTicket(){
         return ticketDAO.findAll();
 
     }

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Saving last changes from working the Ticket pending">
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Edited code and added a sessionTicket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
@@ -90,13 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668637046140</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Added ConnectionFactory file.">
-      <created>1668735333142</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1668735333142</updated>
     </task>
     <task id="LOCAL-00002" summary="Added git ignore file.">
       <created>1668736055072</created>
@@ -420,7 +412,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669587118583</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added a text json for posting ticket">
+      <created>1669595191033</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1669595191033</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Edited the sql query on findPendingTicket">
+      <created>1669595249956</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1669595249956</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Edited code and added a sessionTicket">
+      <created>1669595340853</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1669595340855</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,10 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created the ticketDAO and also added the create" />
-    <MESSAGE value="Created the TicketService file and added also addTicket method" />
-    <MESSAGE value="Added the findByUsername method to the EmployeeDAO" />
-    <MESSAGE value="Changed reqID to reqId" />
     <MESSAGE value="Made the TicketController and added the postTicketHandler" />
     <MESSAGE value="Added the convertSQLInfoToTicket method to the TicketDAO" />
     <MESSAGE value="Edited the application to fix the connection to javalin" />
@@ -460,7 +469,11 @@
     <MESSAGE value="Added getPendingTicket to TicketService" />
     <MESSAGE value="Added getPendingTicket method and handler to te TicketController" />
     <MESSAGE value="Saving last changes from working the Ticket pending" />
-    <option name="LAST_COMMIT_MESSAGE" value="Saving last changes from working the Ticket pending" />
+    <MESSAGE value="deleted some comment out code" />
+    <MESSAGE value="Added a text json for posting ticket" />
+    <MESSAGE value="Edited the sql query on findPendingTicket" />
+    <MESSAGE value="Edited code and added a sessionTicket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited code and added a sessionTicket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
