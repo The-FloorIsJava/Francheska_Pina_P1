@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TicketDAO implements Crudable<Ticket> {
+    // Creates new ticket submitted by user
     @Override
     public Ticket create(Ticket newTicket){
         try(Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
             String sql = "insert into ticket (empId, type, amount) values (?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1,newTicket.getEmpId());
-//            preparedStatement.setInt(2, newTicket.getReqId());
             preparedStatement.setString(2,newTicket.getType());
             preparedStatement.setDouble(3,newTicket.getAmount());
             int checkInsert = preparedStatement.executeUpdate();
@@ -32,13 +32,16 @@ public class TicketDAO implements Crudable<Ticket> {
         }
     }
 
+
+
+    // Were the employee can see all the status from their submitted ticket
     @Override
-    public List<Ticket>findPendingTicket(Employee pendingTicket){
+    public List<Ticket> viewTicketStatus(Employee pendingTicket){
 
 
         try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
             List<Ticket> pendingticket = new ArrayList<>();
-            String sql = " select * from ticket where empId = ? OR status = 'processing' OR status = 'approved' OR status = 'denied' ";
+            String sql = " select * from ticket where empId = ? and status = 'processing' or status = 'approved' or status = 'denied' " ;
 //            String sql = "SELECT ticket.empid FROM ticket INNER JOIN employee ON ticket.empid = employee.empid";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -89,6 +92,7 @@ public class TicketDAO implements Crudable<Ticket> {
         return null;
     }
 
+    // manager update ticket
     @Override
     public boolean update(Ticket updatedTicket) {
         try(Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
