@@ -19,6 +19,7 @@ public class EmployeeService {
         this.ticketDAO = ticketDAO;
     }
 
+    // Add employees
     public Employee addEmployee(Employee employee){
        return employeeDAO.create(employee);
     }
@@ -32,20 +33,21 @@ public class EmployeeService {
 
     }
 
-
-
     public List<Employee> getAllEmployee(){
         return employeeDAO.findAll();
     }
 
+    // login from the user
     public void login(String username, String password) {
         sessionEmployee = employeeDAO.loginCheck(username, password);
     }
 
+    // logs out the user
     public void logout(){
         sessionEmployee = null;
     }
 
+    // get the employee session
     public Employee getSessionEmployee(){
         return sessionEmployee;
     }
