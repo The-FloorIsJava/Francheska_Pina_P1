@@ -25,7 +25,7 @@ public class TicketController {
 
     public void ticketEndPoint(){
         app.post("ticket", this::postTicketHandler);
-        app.get("ticket", this::getAllTicketHandler);
+        app.get("ticket/manager/pending", this::getAllPendingTicket);
         app.put("ticket/manager", this::putManagerTicketHandler);
         app.get("ticket/pending",this::getPendingTicket);
     }
@@ -59,9 +59,21 @@ public class TicketController {
         }
     }
 
-    private void getAllTicketHandler(Context context) {
-        List<Ticket>allTicket = ticketService.getAllTicket();
-        context.json(allTicket);
+    private void getAllPendingTicket(Context context) {
+        Employee employee = employeeService.getSessionEmployee();
+        if(employee == null){
+            context.json("You need to login to be able to view this page");
+            return;
+        }
+
+        String user = employeeService.getSessionEmployee().getRole();
+        if(user.equals("manager")){
+            List<Ticket>allTicket = ticketService.getAllPendingTicket();
+            context.json(allTicket);
+        }else{
+            context.json("You are not allow to view this");
+        }
+
     }
 
     private void postTicketHandler(Context context) throws JsonProcessingException {
