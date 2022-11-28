@@ -38,7 +38,7 @@ public class TicketDAO implements Crudable<Ticket> {
 
         try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
             List<Ticket> pendingticket = new ArrayList<>();
-            String sql = " select * from ticket where empId = ? and status = 'processing' ";
+            String sql = " select * from ticket where empId = ? OR status = 'processing' OR status = 'approved' OR status = 'denied' ";
 //            String sql = "SELECT ticket.empid FROM ticket INNER JOIN employee ON ticket.empid = employee.empid";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
