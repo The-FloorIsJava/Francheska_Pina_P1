@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDAO implements Crudable<Employee> {
+    // Admin controls the registration
     @Override
     public Employee create(Employee newEmployee) {
         try(Connection connection = ConnectionFactory.getConnectionFactory().getConnection()){
@@ -41,10 +42,12 @@ public class EmployeeDAO implements Crudable<Employee> {
     }
 
     @Override
-    public List<Ticket> findPendingTicket(Employee employee) {
+    public List<Ticket> viewTicketStatus(Employee viewTicket) {
         return null;
     }
 
+
+    // Find all the employee from the table
     @Override
     public List<Employee> findAll() {
         try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
@@ -82,7 +85,7 @@ public class EmployeeDAO implements Crudable<Employee> {
             preparedStatement.setString(1, username);
 
 
-            ResultSet resultSet = preparedStatement.executeQuery(); // execute a query
+            ResultSet resultSet = preparedStatement.executeQuery(sql); // execute a query
 
             //If there is no next method
         if(!resultSet.next()){
@@ -150,6 +153,7 @@ public class EmployeeDAO implements Crudable<Employee> {
 
         return employee;
     }
+
 
 
 }
