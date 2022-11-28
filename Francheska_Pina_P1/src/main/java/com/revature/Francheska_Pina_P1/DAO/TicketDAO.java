@@ -57,11 +57,12 @@ public class TicketDAO implements Crudable<Ticket> {
     }
 
 
+    // Finds all the pending tickets for the manager
     @Override
     public List<Ticket> findAll() {
         try (Connection connection = ConnectionFactory.getConnectionFactory().getConnection()) {
             List<Ticket> ticket = new ArrayList<>();
-            String sql = "select * from ticket";
+            String sql = "select * from ticket where status = 'processing' ";
 //            String sql = "SELECT ticket.empid FROM ticket INNER JOIN employee ON ticket.empid = employee.empid";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
