@@ -27,16 +27,17 @@ public class TicketController {
         app.post("ticket", this::postTicketHandler);
         app.get("ticket/manager/pending", this::getAllPendingTicket);
         app.put("ticket/manager", this::putManagerTicketHandler);
-        app.get("ticket/pending",this::getPendingTicket);
+        app.get("ticket/status",this::getViewTicketStatus);
     }
 
-    private void getPendingTicket(Context context) {
+    // Were employees views all their ticket status
+    private void getViewTicketStatus(Context context) {
         Employee employee = employeeService.getSessionEmployee();
         if(employee == null){
             context.json("You need to login to view pending ticket");
             return;
         }
-        List<Ticket>pendingTicket = ticketService.getPendingTicket(employee);
+        List<Ticket>pendingTicket = ticketService.getTicketStatus(employee);
         if(pendingTicket == null){
             context.json("You have no ticket");
             return;
@@ -46,7 +47,14 @@ public class TicketController {
 
     }
 
+    // were manager update ticker
     private void putManagerTicketHandler(Context context) throws JsonProcessingException {
+        Employee employee = employeeService.getSessionEmployee();
+        if(employee == null){
+            context.json("You need to login to be able to view this page");
+            return;
+        }
+
         String user = employeeService.getSessionEmployee().getRole();
         if(user.equals("manager")){
             ObjectMapper mapper = new ObjectMapper();
@@ -59,6 +67,7 @@ public class TicketController {
         }
     }
 
+    // Only the manager can see the pending list from the employees
     private void getAllPendingTicket(Context context) {
         Employee employee = employeeService.getSessionEmployee();
         if(employee == null){
@@ -76,6 +85,7 @@ public class TicketController {
 
     }
 
+    // post the ticket created by user
     private void postTicketHandler(Context context) throws JsonProcessingException {
         Employee employee = employeeService.getSessionEmployee();
         if(employee == null){
@@ -88,6 +98,7 @@ public class TicketController {
         ticketService.addEmployee(ticket);
         context.json(ticket);
         context.json("You created a ticket");
+
 
     }
 }
