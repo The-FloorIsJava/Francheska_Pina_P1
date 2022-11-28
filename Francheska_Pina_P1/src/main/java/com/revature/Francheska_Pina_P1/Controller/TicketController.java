@@ -70,10 +70,12 @@ public class TicketController {
             context.json("You need to login to be able to submit");
             return;
         }
-            ObjectMapper mapper = new ObjectMapper();
-            Ticket ticket = mapper.readValue(context.body(), Ticket.class);
-            ticketService.addEmployee(ticket);
-            context.json(ticket);
+
+        ObjectMapper mapper = new ObjectMapper();
+        Ticket ticket = mapper.readValue(context.body(), Ticket.class);
+        ticketService.addEmployee(ticket);
+        context.json(ticket);
+        context.json("You created a ticket");
 
     }
 }
