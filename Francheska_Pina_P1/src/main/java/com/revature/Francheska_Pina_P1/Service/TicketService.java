@@ -21,19 +21,23 @@ public class TicketService {
         this.employeeDAO = employeeDAO;
     }
 
+    // adds the employee ticket information
     public Ticket addEmployee(Ticket ticket){
        return ticketDAO.create(ticket);
     }
 
 
+    // where manager update the ticket
     public boolean updateTicket(Ticket ticket){
         return ticketDAO.update(ticket);
     }
 
-    public List<Ticket>getPendingTicket(Employee employee){
-        return ticketDAO.findPendingTicket(employee);
+    // Employee ticket status view
+    public List<Ticket>getTicketStatus(Employee employee){
+        return ticketDAO.viewTicketStatus(employee);
     }
 
+    // The manager pending ticket view
     public List<Ticket> getAllPendingTicket(){
         return ticketDAO.findAll();
 

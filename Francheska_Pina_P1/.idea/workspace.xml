@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Edited code and added a sessionTicket">
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Changed getPendingTicket to getViewTicketStatus and added log in implementation to manager ticket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
     </list>
@@ -29,7 +28,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Application.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Requests.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Model/Ticket.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -89,69 +87,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668637046140</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added git ignore file.">
-      <created>1668736055072</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668736055072</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Changed models classes and added an admin class">
-      <created>1668902008287</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1668902008287</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added ConnectionFactoryTestSuite class">
-      <created>1668910260408</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1668910260408</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added the Crudable and Application">
-      <created>1669001708750</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1669001708750</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Edit the Employee class, controller, and DAO">
-      <created>1669001886212</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1669001886212</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Edited the ConnectionFactory">
-      <created>1669002011793</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1669002011793</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Edited request. Added the String type.">
-      <created>1669002129219</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1669002129220</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added the Employee Service">
-      <created>1669002217339</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1669002217339</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added the login feature">
-      <created>1669082000492</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1669082000492</updated>
     </task>
     <task id="LOCAL-00011" summary="Added the login handler to the EmployeeController">
       <created>1669091060069</created>
@@ -433,7 +368,70 @@
       <option name="project" value="LOCAL" />
       <updated>1669595340855</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Changed getAllTicketHandler method to getAllPendingTicket and changed the endoint name too.">
+      <created>1669596611806</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1669596611808</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Changed select all ticket to view only processing status">
+      <created>1669596676827</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1669596676827</updated>
+    </task>
+    <task id="LOCAL-00053" summary="changed getAllTicket method to getAllPendingTicket">
+      <created>1669596708306</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1669596708306</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Changed findPendingTicket to viewTicketStatus">
+      <created>1669671872346</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1669671872347</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Changed the postEmployeeHandler to admin and added implementation to postEmployeeHandler and logoutHandler.">
+      <created>1669672021458</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1669672021458</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added comments">
+      <created>1669672057379</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1669672057379</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added comments">
+      <created>1669672072903</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1669672072903</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Deleted Requests class">
+      <created>1669672110477</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1669672110478</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Changed getPendingTicket to getViewTicketStatus and added log in implementation to manager ticket">
+      <created>1669672184800</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1669672184801</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,14 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made the TicketController and added the postTicketHandler" />
-    <MESSAGE value="Added the convertSQLInfoToTicket method to the TicketDAO" />
-    <MESSAGE value="Edited the application to fix the connection to javalin" />
-    <MESSAGE value="Fixed the javalin app code on the controller" />
-    <MESSAGE value="Fic the code to connect the Dao with Employee and the ticket" />
-    <MESSAGE value="Added new constructors" />
-    <MESSAGE value="Added getAllTicketHandler and replace the addTicket with addEmployee on the postTicketHandler" />
-    <MESSAGE value="Replaced addTicket addEmployee to and added getAllTicket method. Also, TicketService has an array list." />
     <MESSAGE value="Fix the connection problem" />
     <MESSAGE value="Fix the EmployeeController Javalin connection" />
     <MESSAGE value="Fix the EmployeeController Javalin connection and Added a message to the postTicketHandler." />
@@ -473,7 +463,15 @@
     <MESSAGE value="Added a text json for posting ticket" />
     <MESSAGE value="Edited the sql query on findPendingTicket" />
     <MESSAGE value="Edited code and added a sessionTicket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited code and added a sessionTicket" />
+    <MESSAGE value="Changed getAllTicketHandler method to getAllPendingTicket and changed the endoint name too." />
+    <MESSAGE value="Changed select all ticket to view only processing status" />
+    <MESSAGE value="changed getAllTicket method to getAllPendingTicket" />
+    <MESSAGE value="Changed findPendingTicket to viewTicketStatus" />
+    <MESSAGE value="Changed the postEmployeeHandler to admin and added implementation to postEmployeeHandler and logoutHandler." />
+    <MESSAGE value="Added comments" />
+    <MESSAGE value="Deleted Requests class" />
+    <MESSAGE value="Changed getPendingTicket to getViewTicketStatus and added log in implementation to manager ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed getPendingTicket to getViewTicketStatus and added log in implementation to manager ticket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
