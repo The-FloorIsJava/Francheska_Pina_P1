@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Added getPendingTicket method and handler to te TicketController">
+    <list default="true" id="2fafbb4f-671f-43c7-ab86-017106038319" name="Changes" comment="Saving last changes from working the Ticket pending">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Controller/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/DAO/TicketDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/Francheska_Pina_P1/Service/TicketService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669587051442</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Saving last changes from working the Ticket pending">
+      <created>1669587118583</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1669587118583</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -427,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added findbyusername to Crudable" />
     <MESSAGE value="Created the ticketDAO and also added the create" />
     <MESSAGE value="Created the TicketService file and added also addTicket method" />
     <MESSAGE value="Added the findByUsername method to the EmployeeDAO" />
@@ -452,7 +459,8 @@
     <MESSAGE value="Added findPendingTicket to the DAO" />
     <MESSAGE value="Added getPendingTicket to TicketService" />
     <MESSAGE value="Added getPendingTicket method and handler to te TicketController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getPendingTicket method and handler to te TicketController" />
+    <MESSAGE value="Saving last changes from working the Ticket pending" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving last changes from working the Ticket pending" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

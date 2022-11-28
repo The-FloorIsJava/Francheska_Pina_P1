@@ -11,6 +11,8 @@ import java.util.List;
 public class TicketService {
 
     private final TicketDAO ticketDAO;
+
+    private Ticket sessionTicket = null;
     private final EmployeeDAO employeeDAO;
     List<Ticket> ticketsList;
 
@@ -39,6 +41,10 @@ public class TicketService {
 
     public Ticket getTicket(String name){
         return null;
+    }
+
+    public Ticket getSessionTicket(){
+        return sessionTicket;
     }
 
 
