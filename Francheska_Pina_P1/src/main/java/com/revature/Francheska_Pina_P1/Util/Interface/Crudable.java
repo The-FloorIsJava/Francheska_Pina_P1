@@ -11,7 +11,7 @@ public interface Crudable<T> {
     // create
     T create(T newObject);
 
-    List<Ticket>findPendingTicket(Employee pendingTicket);
+    List<Ticket>viewTicketStatus(Employee viewTicket);
 
     // Read
     List<T> findAll();
