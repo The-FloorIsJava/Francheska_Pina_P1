@@ -24,16 +24,16 @@ public class EmployeeController {
         this.app = app;
     }
 
+
+    // passes the javalin contex, holds the information of the web request,and generate a response.
     public void employeeEndpoint(){
         app.get("hello", this::helloHandler);
-        app.post("employee",this::postEmployeeHandler);
+        app.post("admin",this::postEmployeeHandler);
         app.get("employee", this::getAllEmployeeHandler);
         app.post("employee/{name}",this::getSpecificEmployeeHandler);
         app.post("login", this::loginHandler);
         app.delete("logout", this::logoutHandler);
     }
-
-
 
     // gets a specific employee name
     private void getSpecificEmployeeHandler(Context context){
@@ -48,18 +48,19 @@ public class EmployeeController {
 
     }
 
+    // receive a JSON from employee from the body of HTTP request and convert JSON object to employeeService
     private void postEmployeeHandler(Context context) throws JsonProcessingException {
-//        String user = employeeService.getSessionEmployee().getUsername();
-//        if(user == null) {
-//            context.json("Please try a different username");
-//        }
         ObjectMapper mapper = new ObjectMapper();
         Employee employee = mapper.readValue(context.body(), Employee.class);
-        employeeService.addEmployee(employee);
-        context.json(employee);
-        context.json("User was added to the system");
+//        employeeService.addEmployee(employee);
+//        context.json(employee);
+//        context.json("User was added to the system");
 
-
+        if(employeeService.addEmployee(employee) == null){
+            context.json("This Employee was added before");
+        }else{
+            context.json("User was added to the system");
+        }
 
     }
 
@@ -67,23 +68,25 @@ public class EmployeeController {
         ctx.result("Hello Welcome to Disney");
     }
 
+    // use javalin to return the login
     private void loginHandler(Context context) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         LoginCreds loginCreds = mapper.readValue(context.body(), LoginCreds.class);
         employeeService.login(loginCreds.getUsername(), loginCreds.getPassword());
         String user = employeeService.getSessionEmployee().getUsername();
-//        if(user.equals(user)){
-//            context.json("You love pokemon");
-//        }else{
-//            context.json("Employer has successfully logged in");
-//
-//        }
 
 
         context.json( user + " has successfully logged in");
     }
 
+    // logs out
     private void logoutHandler(Context context){
+        Employee employee = employeeService.getSessionEmployee();
+        if(employee == null){
+            context.json("You need to be able to login to be able to logged out");
+            return;
+        }
+
         String employerUser = employeeService.getSessionEmployee().getUsername();
         employeeService.logout();
         context.json(employerUser + "  has logged out");
